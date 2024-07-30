@@ -19,16 +19,16 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="{{$project['footage']}}" alt="">
+                  <img src="/{{$project['footage']}}" alt="">
                 </div>
-
-                {{-- <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
-                </div>
-
+{{--
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
-                </div> --}}
+                    <img src="/{{$project['footage']}}" alt="">
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="/{{$project['footage']}}" alt="">
+                  </div> --}}
 
               </div>
               <div class="swiper-pagination"></div>
