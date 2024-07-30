@@ -21,4 +21,11 @@ class PortfolioConrtroller
             'project' => $project
         ]);
     }
+
+    public function category(string $category){
+        $projects = Portfolio::where('category', $category)->get();
+        return view('portfolio',[
+            'projects' => $projects
+        ]);
+    }
 }

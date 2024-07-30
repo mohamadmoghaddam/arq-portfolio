@@ -25,6 +25,28 @@
       </div>
 
     </div>
+    <style>
+        /* Modify the background color */
+
+        .nav-link{
+
+            color: rgb(255, 255, 255);
+
+
+        }
+        /* .nav-link.active{
+            color: rgb(255, 255, 255);
+            background-color: #18d26e;
+            border-radius: 8px
+
+        } */
+        .nav-link:hover{
+            color: rgb(255, 255, 255)
+        background-color: #18d26e;
+
+        }
+
+    </style>
   </header><!-- End Header -->
 
 
@@ -39,14 +61,12 @@
         <h2>Portfolio</h2>
         <p>My Works</p>
       </div>
-
       <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
+          <div class="col-lg-12 d-flex justify-content-center">
+
+            <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="/portfolio/">All</a></li>
+            <li class="nav-item"><a class="nav-link" href="/portfolio/category/video">Video</a></li>
           </ul>
         </div>
       </div>
@@ -57,7 +77,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <a href="/portfolio/{{$project['id']}}">
             <div class="portfolio-wrap">
-                <img src="{{$project['thumbnail']}}" class="img-fluid" alt="">
+                <img src="/{{$project['thumbnail']}}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>{{$project['title']}}</h4>
                 </div>

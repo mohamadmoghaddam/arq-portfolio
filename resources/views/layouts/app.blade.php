@@ -23,6 +23,28 @@
   <link href="{{ URL::asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ URL::asset('assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
   <link href="{{ URL::asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <style>
+    /* Modify the background color */
+
+    .nav-link{
+
+        color: rgb(255, 255, 255);
+
+
+    }
+    .nav-link.active{
+
+        color: rgb(193, 57, 57);
+
+
+    }
+    .nav-link:hover{
+
+    color: #18d26e;
+
+    }
+
+</style>
 
   <!-- Template Main CSS File -->
   <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet">
