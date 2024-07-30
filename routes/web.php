@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CVConrtroller;
+use App\Http\Controllers\PortfolioConrtroller;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,3 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('/resume', [CVConrtroller::class, 'index']);
+
+Route::get('/portfolio', [PortfolioConrtroller::class, 'index']);
