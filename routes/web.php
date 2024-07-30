@@ -11,3 +11,5 @@ Route::get('/', function () {
 Route::get('/resume', [CVConrtroller::class, 'index']);
 
 Route::get('/portfolio', [PortfolioConrtroller::class, 'index']);
+
+Route::get('/portfolio/{project}', [PortfolioConrtroller::class, 'show']);

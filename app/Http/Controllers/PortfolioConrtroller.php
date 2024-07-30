@@ -14,4 +14,11 @@ class PortfolioConrtroller
             'projects' => $projects
         ]);
     }
+
+    public function show(Portfolio $project){
+
+        return view('portfolio-details',[
+            'project' => $project
+        ]);
+    }
 }
