@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
 
-class PortfolioConrtroller
+class PortfolioController
 {
     public function index(){
         $projects = Portfolio::get();

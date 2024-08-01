@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\CV;
 use Illuminate\Http\Request;
 
-class CVConrtroller
+class CVController
 {
     public function index(){
 
