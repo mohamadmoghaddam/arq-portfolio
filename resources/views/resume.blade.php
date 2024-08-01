@@ -11,7 +11,7 @@
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link active" href="/resume">Resume</a></li>
           <li><a class="nav-link" href="#services">Services</a></li>
-          <li><a class="nav-link" href="/portfoli">Portfolio</a></li>
+          <li><a class="nav-link" href="/portfolio">Portfolio</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <i class="bi mobile-nav-toggle bi-list"></i>
