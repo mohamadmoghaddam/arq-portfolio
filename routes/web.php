@@ -20,3 +20,8 @@ Route::get('/portfolio/category/{category}', [PortfolioController::class, 'categ
 
 Route::get('/admin', [UserController::class, 'login']);
 Route::post('/admin/login', [UserController::class, 'authenticate']);
+
+Route::get('/admin/resume', [CVController::class, 'list']);
+Route::get('/admin/resume/create', [CVController::class, 'create']);
+Route::post('/admin/resume', [CVController::class, 'store']);
+Route::delete('/admin/resume/{cv}' ,[CVController::class, 'destroy']);
