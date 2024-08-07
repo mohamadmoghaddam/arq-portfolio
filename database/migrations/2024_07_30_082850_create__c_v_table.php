@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('company');
             $table->text('description');
             $table->enum('type', ['education', 'experience']);
+            $table->timestamps();
         });
     }
 

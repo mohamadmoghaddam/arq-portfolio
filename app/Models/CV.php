@@ -12,7 +12,7 @@ class CV extends Model
     protected $table = 'cv';
 
     protected $fillable = [
-        'title',
+        'position',
         'startdate',
         'enddate',
         'company',
