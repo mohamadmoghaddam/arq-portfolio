@@ -74,7 +74,7 @@
                                             <td>{{ $project['description']}}</td>
                                             <td>{{ $project['footage']}}</td>
                                             <td>
-                                                <form action="{{ url('/admin/resume', ['id' => $project['id']]) }}" method="POST">
+                                                <form action="{{ url('/admin/portfolio', ['id' => $project['id']]) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">

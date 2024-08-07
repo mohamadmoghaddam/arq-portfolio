@@ -36,4 +36,9 @@ class PortfolioController
         ]);
 
     }
+    public function destroy(Portfolio $project){
+        $project->delete();
+        return redirect('/admin/portfolio/');
+
+    }
 }
