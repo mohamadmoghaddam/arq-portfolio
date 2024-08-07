@@ -28,4 +28,6 @@ Route::post('/admin/resume', [CVController::class, 'store']);
 Route::delete('/admin/resume/{cv}' ,[CVController::class, 'destroy']);
 
 Route::get('/admin/portfolio', [PortfolioController::class, 'list']);
+Route::get('/admin/portfolio/create', [PortfolioController::class, 'create']);
+Route::post('/admin/portfolio', [PortfolioController::class, 'store']);
 Route::delete('/admin/portfolio/{project}' ,[PortfolioController::class, 'destroy']);
