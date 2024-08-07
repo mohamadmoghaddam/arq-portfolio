@@ -28,4 +28,12 @@ class PortfolioController
             'projects' => $projects
         ]);
     }
+    public function list(){
+
+        $projects = Portfolio::get();
+        return view('/admin/portfolio',[
+            'projects' => $projects
+        ]);
+
+    }
 }

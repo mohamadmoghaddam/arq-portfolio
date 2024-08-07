@@ -3,6 +3,7 @@
 use App\Http\Controllers\CVController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\UserController;
+use App\Models\Portfolio;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,3 +26,5 @@ Route::get('/admin/resume', [CVController::class, 'list']);
 Route::get('/admin/resume/create', [CVController::class, 'create']);
 Route::post('/admin/resume', [CVController::class, 'store']);
 Route::delete('/admin/resume/{cv}' ,[CVController::class, 'destroy']);
+
+Route::get('/admin/portfolio', [PortfolioController::class, 'list']);
