@@ -71,13 +71,18 @@
                                             <td>{{ $cv['enddate']}}</td>
                                             <td>{{ $cv['type']}}</td>
                                             <td>
-                                                <form action="{{ url('/admin/resume', ['id' => $cv['id']]) }}" method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger">
-                                                        <i class='fa fa-trash'></i>
-                                                    </button>
-                                                </form>
+                                                <div class="row justify-content-center">
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                    <form action="{{ url('/admin/resume', ['id' => $cv['id']]) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger btn-sm">
+                                                            <i class='fa fa-trash'></i>
+                                                        </button>
+                                                    </form>
+                                                    <a href="/admin/resume/edit/{{$cv['id']}}" class="btn btn-warning btn-sm"><i class="fa fa-pen"></i></a>
+                                                 </div>
+                                                </div>
                                             </td>
                                         </tr>
                                         @endforeach

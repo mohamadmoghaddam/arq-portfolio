@@ -56,6 +56,37 @@ class CVController
         return redirect('/admin/resume/');
 
     }
+
+    public function edit(CV $cv){
+        return view('/admin/editresume', [
+            'cv' => $cv
+        ]);
+    }
+    public function update(Request $request, CV $cv)
+    {
+        $request->validate([
+            'company' => 'required',
+        'type' => [
+            'required',
+            Rule::in(['education', 'experience']),
+        ],
+        'position' => 'required',
+            'description' => 'required',
+            'startdate' => 'required|date',
+            'enddate' => 'required|date|after:start_date'
+
+            ]);
+        $cv -> update([
+            'position' => $request -> position,
+            'company' => $request -> company,
+            'type' => $request -> type,
+            'description' => $request -> description,
+            'startdate' => $request -> startdate,
+            'enddate' => $request -> enddate
+        ]);
+        return redirect('/admin/resume');
+    }
+
     public function destroy(CV $cv){
         $cv->delete();
         return redirect('/admin/resume/');

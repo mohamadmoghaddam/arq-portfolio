@@ -31,6 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/resume', [CVController::class, 'list']);
     Route::get('/admin/resume/create', [CVController::class, 'create']);
     Route::post('/admin/resume', [CVController::class, 'store']);
+    Route::get('/admin/resume/edit/{cv}', [CVController::class, 'edit']);
+    Route::patch('/admin/resume/{cv}', [CVController::class, 'update']);
     Route::delete('/admin/resume/{cv}' ,[CVController::class, 'destroy']);
 
     Route::get('/admin/portfolio', [PortfolioController::class, 'list']);
