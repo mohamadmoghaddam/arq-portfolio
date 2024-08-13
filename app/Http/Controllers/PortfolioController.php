@@ -19,15 +19,6 @@ class PortfolioController
         ]);
     }
 
-    public function category_index(Category $category){
-        $categories = Category::get();
-        $projects = $category->projects()->get();
-        return view('portfolio',[
-            'projects' => $projects,
-            'categories' => $categories
-        ]);
-    }
-
     public function show(Portfolio $project){
         $project->get();
         return view('portfolio-details',[
@@ -76,4 +67,5 @@ class PortfolioController
         return redirect('/admin/portfolio/');
 
     }
+
 }

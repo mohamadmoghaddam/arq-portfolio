@@ -23,18 +23,25 @@
     <hr class="sidebar-divider">
 
 
-    <!-- Nav Item - Charts -->
+
     <li class="nav-item">
         <a class="nav-link" href="/admin/resume">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Resume</span></a>
     </li>
 
-    <!-- Nav Item - Tables -->
+
     <li class="nav-item">
         <a class="nav-link" href="/admin/portfolio">
             <i class="fas fa-fw fa-table"></i>
             <span>Portfolio</span></a>
+    </li>
+
+
+    <li class="nav-item">
+        <a class="nav-link" href="/admin/category">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Category</span></a>
     </li>
 
     <!-- Divider -->
