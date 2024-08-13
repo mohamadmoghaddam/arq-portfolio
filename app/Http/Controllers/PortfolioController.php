@@ -28,7 +28,7 @@ class PortfolioController
 
     public function list(){
 
-        $projects = Portfolio::get();
+        $projects = Portfolio::with('category')->get();
         return view('/admin/portfolio',[
             'projects' => $projects
         ]);

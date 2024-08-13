@@ -69,7 +69,7 @@
                                             <td>{{ $project['title']}}</td>
                                             <td>{{ $project['client']}}</td>
                                             <td>{{ $project['thumbnail']}}</td>
-                                            <td>{{ $project['category']}}</td>
+                                            <td>{{ $project->category->name}}</td>
                                             <td>{{ $project['date']}}</td>
                                             <td>{{ $project['description']}}</td>
                                             <td>{{ $project['footage']}}</td>
