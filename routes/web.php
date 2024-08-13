@@ -39,5 +39,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/admin/portfolio/{project}' ,[PortfolioController::class, 'destroy']);
 
     Route::get('/admin/category', [CategoryController::class, 'list']);
-
+    Route::delete('/admin/category/{category}' ,[CategoryController::class, 'destroy']);
 });
