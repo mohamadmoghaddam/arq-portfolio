@@ -32,7 +32,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Category Records
-                                <a href="/admin/category/create" class="btn btn-success float-right"><i class="fa fa-plus"></i> Add a record</a>
+                                <a href="/admin/category/create" class="btn btn-success float-right"><i class="fa fa-plus"></i> Add a new category</a>
 
                             </h6>
                         </div>

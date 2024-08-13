@@ -26,6 +26,23 @@ class CategoryController extends Controller
 
     }
 
+    public function create(){
+
+        return view('/admin/addcategory');
+
+    }
+
+    public function store(Request $request){
+        $request->validate([
+            'name' => 'required',
+            ]);
+            Category::create([
+                'name' => $request -> name,
+            ]);
+            return redirect('/admin/category/');
+
+        }
+
     public function destroy(Category $category){
         $category->delete();
         return redirect('/admin/category/');
