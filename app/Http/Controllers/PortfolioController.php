@@ -35,8 +35,10 @@ class PortfolioController
 
     }
     public function create(){
-
-        return view('/admin/addportfolio');
+        $categories = Category::get();
+        return view('/admin/addportfolio',[
+            'categories' => $categories
+        ]);
 
     }
     public function store(Request $request){

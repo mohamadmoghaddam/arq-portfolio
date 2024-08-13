@@ -89,9 +89,10 @@
                                         <div class="col-sm-6">
                                         <label for="category">Category:</label>
                                             <select class="form-control" name="category" aria-label="Default select example" id="category">
-                                                <option value="" disabled selected>Select type</option>
-                                                <option value="education" >Education</option>
-                                                <option value="experience">Experience</option>
+                                                <option value="" disabled selected>Select category</option>
+                                                @foreach($categories as $category)
+                                                    <option value="{{$category['id']}}" >{{$category['name']}}</option>
+                                                @endforeach
                                             </select>
                                             @error('category')
                                                     <div class="alert alert-danger">{{ $message }}</div>
