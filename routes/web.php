@@ -17,10 +17,8 @@ Route::get('/about', function () {
 Route::get('/resume', [CVController::class, 'index']);
 
 Route::get('/portfolio', [PortfolioController::class, 'index']);
-
 Route::get('/portfolio/{project}', [PortfolioController::class, 'show']);
-
-Route::get('/portfolio/category/{category}', [PortfolioController::class, 'category']);
+Route::get('/portfolio/category/{category}', [PortfolioController::class, 'category_index']);
 
 
 Route::get('/admin', [UserController::class, 'login'])->name('login');

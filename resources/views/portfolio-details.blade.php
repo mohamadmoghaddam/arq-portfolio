@@ -40,7 +40,7 @@
 
             <h3>Project information                             <a href="/portfolio"><i class="bi bi-arrow-bar-right"></i></a></h3>
             <ul>
-              <li><strong>Category</strong>: {{$project['category']}}</li>
+              <li><strong>Category</strong>: {{$project->category->name}}</li>
               <li><strong>Client</strong>: {{$project['company']}}</li>
               <li><strong>Project date</strong>: {{$project['date']}}</li>
             </ul>

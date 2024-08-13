@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -10,25 +11,30 @@ use Illuminate\Validation\Rule;
 class PortfolioController
 {
     public function index(){
+        $categories = Category::get();
         $projects = Portfolio::get();
         return view('portfolio',[
-            'projects' => $projects
+            'projects' => $projects,
+            'categories' => $categories
+        ]);
+    }
+
+    public function category_index(Category $category){
+        $categories = Category::get();
+        $projects = $category->projects()->get();
+        return view('portfolio',[
+            'projects' => $projects,
+            'categories' => $categories
         ]);
     }
 
     public function show(Portfolio $project){
-
+        $project->get();
         return view('portfolio-details',[
             'project' => $project
         ]);
     }
 
-    public function category(string $category){
-        $projects = Portfolio::where('category', $category)->get();
-        return view('portfolio',[
-            'projects' => $projects
-        ]);
-    }
     public function list(){
 
         $projects = Portfolio::get();

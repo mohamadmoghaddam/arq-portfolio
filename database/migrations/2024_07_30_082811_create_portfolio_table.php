@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('client');
             $table->string('thumbnail');
-            $table->string('category');
+            $table->integer('category_id');
             $table->date('date');
             $table->text('description');
             $table->string('footage');

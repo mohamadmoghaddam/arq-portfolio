@@ -66,7 +66,9 @@
 
             <ul class="nav">
             <li class="nav-item"><a class="nav-link" href="/portfolio/">All</a></li>
-            <li class="nav-item"><a class="nav-link" href="/portfolio/category/video">Video</a></li>
+            @foreach($categories as $category)
+                <li class="nav-item"><a class="nav-link" href="/portfolio/category/{{$category['id']}}">{{$category['name']}}</a></li>
+            @endforeach
           </ul>
         </div>
       </div>
