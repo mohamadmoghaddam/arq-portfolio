@@ -9,6 +9,7 @@ class CV extends Model
 {
     use HasFactory;
 
+    protected $table = 'cvs';
 
     protected $fillable = [
         'position',
