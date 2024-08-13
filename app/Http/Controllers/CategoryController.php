@@ -44,9 +44,12 @@ class CategoryController extends Controller
         }
 
     public function destroy(Category $category){
-        $category->delete();
-        return redirect('/admin/category/');
-
+        if($category->projects()->count() == 0){
+            $category->delete();
+            return redirect('/admin/category/');
+        }else{
+            return redirect('/admin/category/');
+        }
     }
 
 }
