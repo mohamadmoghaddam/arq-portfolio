@@ -58,7 +58,7 @@ class PortfolioController
                 'description' => $request -> description,
                 'thumbnail' => $request -> thumbnail,
                 'footage' => $request -> footage,
-                'category' => $request -> category,
+                'category_id' => $request -> category,
                 'date' => $request -> date
             ]);
             return redirect('/admin/portfolio/');
