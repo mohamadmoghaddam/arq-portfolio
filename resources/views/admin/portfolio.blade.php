@@ -69,7 +69,13 @@
                                             <td>{{ $project['title']}}</td>
                                             <td>{{ $project['client']}}</td>
                                             <td>{{ $project['thumbnail']}}</td>
-                                            <td>{{ $project->category->name}}</td>
+                                            <td>
+                                            @if($project->category === null)
+                                                <p class="text-danger">Related category does not exist</p>
+                                            @else
+                                                {{$project->category->name}}
+                                            @endif
+                                            </td>
                                             <td>{{ $project['date']}}</td>
                                             <td>{{ $project['description']}}</td>
                                             <td>{{ $project['footage']}}</td>
