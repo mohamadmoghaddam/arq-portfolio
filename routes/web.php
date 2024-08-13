@@ -38,6 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/portfolio', [PortfolioController::class, 'list']);
     Route::get('/admin/portfolio/create', [PortfolioController::class, 'create']);
     Route::post('/admin/portfolio', [PortfolioController::class, 'store']);
+    Route::get('/admin/portfolio/edit/{project}', [PortfolioController::class, 'edit']);
+    Route::patch('/admin/portfolio/{project}', [PortfolioController::class, 'update']);
     Route::delete('/admin/portfolio/{project}' ,[PortfolioController::class, 'destroy']);
 
     Route::get('/admin/category', [CategoryController::class, 'list']);

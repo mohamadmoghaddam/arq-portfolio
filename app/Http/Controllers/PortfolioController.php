@@ -50,7 +50,6 @@ class PortfolioController
             'footage' => 'required',
             'category' => 'required',
             'date' => 'required|date'
-
             ]);
             Portfolio::create([
                 'title' => $request -> title,
@@ -64,6 +63,39 @@ class PortfolioController
             return redirect('/admin/portfolio/');
 
         }
+
+    public function edit(Portfolio $project){
+        $categories = Category::get();
+        return view('/admin/editportfolio', [
+            'project' => $project,
+            'categories' => $categories
+        ]);
+    }
+
+    public function update(Request $request, Portfolio $project)
+    {
+        $request->validate([
+            'title' => 'required',
+            'client' => 'required',
+            'description' => 'required',
+            'thumbnail' => 'required',
+            'footage' => 'required',
+            'category' => 'required',
+            'date' => 'required|date'
+
+            ]);
+        $project -> update([
+            'title' => $request -> title,
+            'client' => $request -> client,
+            'description' => $request -> description,
+            'thumbnail' => $request -> thumbnail,
+            'footage' => $request -> footage,
+            'category_id' => $request -> category,
+            'date' => $request -> date
+        ]);
+        return redirect('/admin/portfolio');
+    }
+
     public function destroy(Portfolio $project){
         $project->delete();
         return redirect('/admin/portfolio/');
