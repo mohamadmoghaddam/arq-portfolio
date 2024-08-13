@@ -43,6 +43,23 @@ class CategoryController extends Controller
 
         }
 
+    public function edit(Category $category){
+        return view('/admin/editcategory', [
+            'category' => $category
+        ]);
+    }
+
+    public function update(Request $request, Category $category)
+    {
+        $request->validate([
+            'name' => 'required',
+            ]);
+        $category -> update([
+        'name' => $request -> name
+        ]);
+        return redirect('/admin/category');
+    }
+
     public function destroy(Category $category){
         if($category->projects()->count() == 0){
             $category->delete();

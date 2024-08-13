@@ -62,15 +62,17 @@
                                             <td>{{ $category['name']}}</td>
                                             <td>{{$category['projects_count']}}</td>
                                             <td>
+                                                <div class="row justify-content-center">
                                                 @if($category['projects_count'] == 0)
                                                     <form action="{{ url('/admin/category', ['id' => $category['id']]) }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">
-                                                            <i class='fa fa-trash'></i>
-                                                        </button>
+                                                        <button type="submit" class="btn btn-danger btn-sm"><i class='fa fa-trash'></i></button>
+
                                                     </form>
                                                 @endif
+                                                <a href="/admin/category/edit/{{$category['id']}}" class="btn btn-warning btn-sm"><i class="fa fa-pen"></i></a>
+                                                </div>
                                             </td>
                                         </tr>
                                         @endforeach

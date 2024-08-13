@@ -41,5 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/category', [CategoryController::class, 'list']);
     Route::get('/admin/category/create', [CategoryController::class, 'create']);
     Route::post('/admin/category', [CategoryController::class, 'store']);
+    Route::get('/admin/category/edit/{category}', [CategoryController::class, 'edit']);
+    Route::patch('/admin/category/{category}', [CategoryController::class, 'update']);
     Route::delete('/admin/category/{category}' ,[CategoryController::class, 'destroy']);
 });
