@@ -81,17 +81,24 @@ class PortfolioController
             'title' => 'required',
             'client' => 'required',
             'description' => 'required',
-            'thumbnail' => 'required',
+            'thumbnail' => 'file',
             'footage' => 'required',
             'category' => 'required',
             'date' => 'required|date'
 
             ]);
+            if($request->file('thumbnail')== null){
+                $filename = $project['thumbnail'];
+            }else{
+            Storage::disk('public')->delete('thumbnails/'.$project['thumbnail']);
+            $request->file('thumbnail')->store('thumbnails', 'public');
+            $filename = $request->file('thumbnail')->hashName();
+            }
         $project -> update([
             'title' => $request -> title,
             'client' => $request -> client,
             'description' => $request -> description,
-            'thumbnail' => $request -> thumbnail,
+            'thumbnail' => $filename,
             'footage' => $request -> footage,
             'category_id' => $request -> category,
             'date' => $request -> date
