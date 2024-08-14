@@ -79,7 +79,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <a href="/portfolio/{{$project['id']}}">
             <div class="portfolio-wrap">
-                <img src="/{{$project['thumbnail']}}" class="img-fluid" alt="">
+                <img src="{{ asset('/storage/thumbnails/'.$project['thumbnail']) }}" class="img-fluid" alt="{{ $project['title']}}">
                 <div class="portfolio-info">
                     <h4>{{$project['title']}}</h4>
                 </div>
