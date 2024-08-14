@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function index(Category $category){
         $categories = Category::get();
-        $projects = $category->projects()->get();
+        $projects = $category->projects()->orderBy('date', 'asc')->get();
         return view('portfolio',[
             'projects' => $projects,
             'categories' => $categories

@@ -12,7 +12,7 @@ class CVController
 {
     public function index(){
 
-        $cvs = CV::get();
+        $cvs = CV::orderBy('startdate', 'asc')->get();
         return view('resume',[
             'cvs' => $cvs
         ]);
@@ -21,7 +21,7 @@ class CVController
 
     public function list(){
 
-        $cvs = CV::get();
+        $cvs = CV::orderBy('startdate', 'asc')->get();
         return view('/admin/resume',[
             'cvs' => $cvs
         ]);
