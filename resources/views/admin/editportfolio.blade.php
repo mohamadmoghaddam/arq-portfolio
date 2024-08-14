@@ -33,7 +33,7 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Add a new portfolio record</h1>
                                 </div>
-                                <form class="user" method="POST" action="/admin/portfolio/{{$project['id']}}">
+                                <form class="user" method="POST" action="/admin/portfolio/{{$project['id']}}" enctype="multipart/form-data">
                                     @csrf
                                     @method('PATCH')
                                     <div class="form-group row">
@@ -63,12 +63,14 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="thumbnail">Thumbnail:</label>
-                                        <input type="text" name="thumbnail" class="form-control" id="thumbnail"
-                                             placeholder="thumbnail" value="{{$project['thumbnail']}}">
+                                        <input type="file" name="thumbnail" class="form-control-file" id="thumbnail"
+                                             placeholder="thumbnail">
                                              @error('thumbnail')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                              @enderror
-                                    </div>
+                                            </div>
+                                            <label for="oldimage">Old Thumbnail:</label><br>
+                                            <img src="{{ asset('/storage/thumbnails/'.$project['thumbnail']) }}" id="oldimage" alt="{{ $project['title']}}" class="img-thumbnail" width="200" height="200">
                                     <div class="form-group">
                                         <label for="footage">Footage:</label>
                                         <input type="text" name="footage" class="form-control" id="footage"

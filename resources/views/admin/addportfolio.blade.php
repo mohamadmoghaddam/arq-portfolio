@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="thumbnail">Thumbnail:</label>
-                                        <input type="file" name="thumbnail" class="form-control" id="thumbnail"
+                                        <input type="file" name="thumbnail" class="form-control-file" id="thumbnail"
                                              placeholder="thumbnail">
                                              @error('thumbnail')
                                                     <div class="alert alert-danger">{{ $message }}</div>
