@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 class PortfolioController
@@ -46,16 +47,18 @@ class PortfolioController
             'title' => 'required',
             'client' => 'required',
             'description' => 'required',
-            'thumbnail' => 'required',
+            'thumbnail' => 'required|file',
             'footage' => 'required',
             'category' => 'required',
             'date' => 'required|date'
             ]);
+            $request->file('thumbnail')->store('thumbnails', 'public');
+            $filename = $request->file('thumbnail')->hashName();
             Portfolio::create([
                 'title' => $request -> title,
                 'client' => $request -> client,
                 'description' => $request -> description,
-                'thumbnail' => $request -> thumbnail,
+                'thumbnail' => $filename,
                 'footage' => $request -> footage,
                 'category_id' => $request -> category,
                 'date' => $request -> date
@@ -97,6 +100,7 @@ class PortfolioController
     }
 
     public function destroy(Portfolio $project){
+        Storage::disk('public')->delete('thumbnails/'.$project['thumbnail']);
         $project->delete();
         return redirect('/admin/portfolio/');
 

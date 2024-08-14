@@ -33,7 +33,7 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Add a new portfolio record</h1>
                                 </div>
-                                <form class="user" method="POST" action="/admin/portfolio">
+                                <form class="user" method="POST" action="/admin/portfolio" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group row">
                                         <div class="col-sm-6">
@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="thumbnail">Thumbnail:</label>
-                                        <input type="text" name="thumbnail" class="form-control" id="thumbnail"
+                                        <input type="file" name="thumbnail" class="form-control" id="thumbnail"
                                              placeholder="thumbnail">
                                              @error('thumbnail')
                                                     <div class="alert alert-danger">{{ $message }}</div>

@@ -68,7 +68,7 @@
                                         <tr>
                                             <td>{{ $project['title']}}</td>
                                             <td>{{ $project['client']}}</td>
-                                            <td>{{ $project['thumbnail']}}</td>
+                                            <td><img src="{{ asset('/storage/thumbnails/'.$project['thumbnail']) }}" alt="{{ $project['title']}}" width="200" height="200"></td>
                                             <td>
                                             @if($project->category === null)
                                                 <p class="text-danger">Related category does not exist</p>
