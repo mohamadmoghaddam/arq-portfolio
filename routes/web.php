@@ -20,7 +20,7 @@ Route::get('/resume', [CVController::class, 'index']);
 
 Route::get('/gallery', [PortfolioController::class, 'index']);
 Route::get('/gallery/{project}', [PortfolioController::class, 'show']);
-Route::get('/portfolio/category/{category}', [CategoryController::class, 'index']);
+Route::get('/gallery/category/{category}', [CategoryController::class, 'index']);
 
 
 Route::get('/admin', [UserController::class, 'login'])->name('login');

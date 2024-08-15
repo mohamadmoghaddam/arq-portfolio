@@ -11,9 +11,10 @@ class CategoryController extends Controller
     public function index(Category $category){
         $categories = Category::get();
         $projects = $category->projects()->orderBy('date', 'asc')->get();
-        return view('portfolio',[
+        return view('gallery',[
             'projects' => $projects,
-            'categories' => $categories
+            'categories' => $categories,
+            'category' => $category
         ]);
     }
 

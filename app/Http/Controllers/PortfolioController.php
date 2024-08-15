@@ -21,9 +21,11 @@ class PortfolioController
     }
 
     public function show(Portfolio $project){
+        $categories = Category::get();
         $project->get();
         return view('gallery-single',[
-            'project' => $project
+            'project' => $project,
+            'categories' => $categories
         ]);
     }
 

@@ -23,8 +23,14 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            @if(isset($category))
+            <li><a href="/">Home</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li class="active">{{$category['name']}}</li>
+            @else
+            <li><a href="/">Home</a></li>
             <li class="current">Gallery</li>
+            @endif
           </ol>
         </div>
       </nav>
