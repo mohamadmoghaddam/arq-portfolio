@@ -14,7 +14,7 @@ class PortfolioController
     public function index(){
         $categories = Category::get();
         $projects = Portfolio::orderBy('date', 'asc')->get();
-        return view('portfolio',[
+        return view('gallery',[
             'projects' => $projects,
             'categories' => $categories
         ]);
@@ -22,7 +22,7 @@ class PortfolioController
 
     public function show(Portfolio $project){
         $project->get();
-        return view('portfolio-details',[
+        return view('gallery-single',[
             'project' => $project
         ]);
     }
