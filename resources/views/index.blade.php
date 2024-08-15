@@ -1,9 +1,10 @@
 
-@extends('layouts.app')
+@extends('layouts.app-index')
 
 @section('index')
 
-
+<body class="about-page scrolled" date-aos-easing="ease-in-out"
+data-aos-duration="600" data-aos-delay="0">
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container">
@@ -18,7 +19,7 @@
           <li><a class="nav-link active" href="/">Home</a></li>
           <li><a class="nav-link" href="/about">About</a></li>
           <li><a class="nav-link" href="/resume">Resume</a></li>
-          <li><a class="nav-link" href="/portfolio">Gallery</a></li>
+          <li><a class="nav-link" href="/gallery">Gallery</a></li>
         </ul>
         <i class="bi mobile-nav-toggle bi-list"></i>
       </nav><!-- .navbar -->
