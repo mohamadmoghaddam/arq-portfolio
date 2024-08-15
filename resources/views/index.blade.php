@@ -18,7 +18,7 @@
           <li><a class="nav-link active" href="/">Home</a></li>
           <li><a class="nav-link" href="/about">About</a></li>
           <li><a class="nav-link" href="/resume">Resume</a></li>
-          <li><a class="nav-link" href="/portfolio">Portfolio</a></li>
+          <li><a class="nav-link" href="/portfolio">Gallery</a></li>
         </ul>
         <i class="bi mobile-nav-toggle bi-list"></i>
       </nav><!-- .navbar -->
