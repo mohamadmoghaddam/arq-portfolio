@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Custom styles for this page -->
-    <link href="{{ URL::asset('vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('admin/assets/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -11,7 +11,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        @include('/admin/layouts/sidebar')
+        @include('admin.layouts.sidebar')
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -19,7 +19,7 @@
             <!-- Main Content -->
             <div id="content">
 
-                @include('/admin/layouts/topbar')
+                @include('admin.layouts.topbar')
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -128,10 +128,10 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    @include('/admin/layouts/logout')
+    @include('admin.layouts.logout')
     <!-- Page level plugins -->
-    <script src="{{ URL::asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{ URL::asset('vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{ URL::asset('admin/assets/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{ URL::asset('admin/assets/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="{{ URL::asset('js/demo/datatables-demo.js')}}"></script>
+    <script src="{{ URL::asset('admin/assets/js/demo/datatables-demo.js')}}"></script>

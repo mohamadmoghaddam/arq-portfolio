@@ -7,14 +7,14 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        @include('/admin/layouts/sidebar')
+        @include('admin.layouts.sidebar')
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
 
-                @include('/admin/layouts/topbar')
+                @include('admin.layouts.topbar')
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -49,12 +49,12 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-  @include('/admin/layouts/logout')
+  @include('admin.layouts.logout')
 
 
     <!-- Page level plugins -->
-    <script src="{{ URL::asset('assets/vendor/chart.js/Chart.min.js')}}"></script>
+    <script src="{{ URL::asset('admin/assets/assets/vendor/chart.js/Chart.min.js')}}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="{{ URL::asset('js/demo/chart-area-demo.js')}}"></script>
-    <script src="{{ URL::asset('js/demo/chart-pie-demo.js')}}"></script>
+    <script src="{{ URL::asset('admin/assets/js/demo/chart-area-demo.js')}}"></script>
+    <script src="{{ URL::asset('admin/assets/js/demo/chart-pie-demo.js')}}"></script>
