@@ -18,8 +18,8 @@ Route::get('/about', function () {
 
 Route::get('/resume', [CVController::class, 'index']);
 
-Route::get('/portfolio', [PortfolioController::class, 'index']);
-Route::get('/portfolio/{project}', [PortfolioController::class, 'show']);
+Route::get('/gallery', [PortfolioController::class, 'index']);
+Route::get('/gallery/{project}', [PortfolioController::class, 'show']);
 Route::get('/portfolio/category/{category}', [CategoryController::class, 'index']);
 
 
