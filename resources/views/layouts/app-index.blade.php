@@ -79,7 +79,7 @@
       <script src="{{ URL::asset('assets/index/vendor/php-email-form/validate.js') }}"></script>
 
       <!-- Template Main JS File -->
-      <script src="{{ URL::asset('assets/index/js/main.js') }}"></script>
+      <script src="{{ URL::asset('assets/index/js/index.js') }}"></script>
 
 </body>
 
