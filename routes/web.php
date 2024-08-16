@@ -13,7 +13,10 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    $categories = Category::get();
+    return view('about', [
+        'categories' => $categories
+    ]);
 });
 
 Route::get('/resume', [CVController::class, 'index']);
