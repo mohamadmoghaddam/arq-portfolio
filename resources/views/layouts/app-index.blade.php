@@ -22,6 +22,7 @@
   <link href="{{ URL::asset('assets/index/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ URL::asset('assets/index/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
   <link href="{{ URL::asset('assets/index/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ URL::asset('assets/main/vendor/aos/aos.css" rel="stylesheet') }}">
   <link href="{{ URL::asset('assets/index/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ URL::asset('assets/index/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
   <link href="{{ URL::asset('assets/index/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
@@ -70,7 +71,7 @@
       <!-- Vendor JS Files -->
       <script src="{{ URL::asset('assets/index/vendor/purecounter/purecounter_vanilla.js') }}"></script>
       <script src="{{ URL::asset('assets/index/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-      <script src="{{ URL::asset('assets/index/vendor/aos/aos.js') }}"></script>
+      <script src="{{ URL::asset('assets/main/vendor/aos/aos.js') }}"></script>
       <script src="{{ URL::asset('assets/index/vendor/glightbox/js/glightbox.min.js') }}"></script>
       <script src="{{ URL::asset('assets/index/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
       <script src="{{ URL::asset('assets/index/vendor/swiper/swiper-bundle.min.js') }}"></script>

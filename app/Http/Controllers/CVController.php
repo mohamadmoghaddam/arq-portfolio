@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\CV;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -11,10 +12,11 @@ use Illuminate\Validation\Rule;
 class CVController
 {
     public function index(){
-
+        $categories = Category::get();
         $cvs = CV::orderBy('startdate', 'asc')->get();
         return view('resume',[
-            'cvs' => $cvs
+            'cvs' => $cvs,
+            'categories' => $categories
         ]);
 
     }

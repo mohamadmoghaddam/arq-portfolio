@@ -1,7 +1,8 @@
-<header id="header" class="header d-flex align-items-center sticky-top">
+<header class="header header-top d-flex align-items-center sticky-top">
+    {{-- id="header"  INO AZ HEADER BARDASHTAM--}}
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
       </a>
