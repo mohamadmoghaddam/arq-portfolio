@@ -1,6 +1,10 @@
 @extends('admin.layouts.admin')
 
 @section('content')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 34c8bbf6a784b78a3017444cc15aa7a50bf1be3d
 
 <body id="page-top">
 
@@ -116,4 +120,7 @@
     </a>
 
     @include('admin.layouts.logout')
+<<<<<<< HEAD
 
+=======
+>>>>>>> 34c8bbf6a784b78a3017444cc15aa7a50bf1be3d

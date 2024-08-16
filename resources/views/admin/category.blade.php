@@ -1,6 +1,10 @@
 @extends('admin.layouts.admin')
 
 @section('content')
+    <!-- Custom styles for this page -->
+    <link href="{{ URL::asset('vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
+</head>
 
 <body id="page-top">
 

@@ -24,8 +24,14 @@
     <!-- Custom styles for this page -->
     <link href="{{ URL::asset('/assets/admin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
+<<<<<<< HEAD
 </head>
+=======
+   <!-- Custom styles for this page -->
+   <link href="{{ URL::asset('assets/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+>>>>>>> 34c8bbf6a784b78a3017444cc15aa7a50bf1be3d
 
+</head>
 
 
 @yield('content')
@@ -47,6 +53,12 @@
    <!-- Page level custom scripts -->
    <script src="{{ URL::asset('/assets/admin/js/demo/datatables-demo.js')}}"></script>
 
+   <!-- Page level plugins -->
+   <script src="{{ URL::asset('assets/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+   <script src="{{ URL::asset('assets/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+
+   <!-- Page level custom scripts -->
+   <script src="{{ URL::asset('assets/js/demo/datatables-demo.js')}}"></script>
 
 </body>
 
