@@ -1,7 +1,7 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-</head>
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -51,10 +51,3 @@
 
   @include('admin.layouts.logout')
 
-
-    <!-- Page level plugins -->
-    <script src="{{ URL::asset('admin/assets/assets/vendor/chart.js/Chart.min.js')}}"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{{ URL::asset('admin/assets/js/demo/chart-area-demo.js')}}"></script>
-    <script src="{{ URL::asset('admin/assets/js/demo/chart-pie-demo.js')}}"></script>
